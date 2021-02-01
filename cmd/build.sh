@@ -2,7 +2,7 @@
 
 source_path=./cmd
 go_file=marionette.go
-image_name=marionette
+image_name=marionette_go
 build_output=marionette
 
 echo CGO_ENABLED=0 GOOS="linux" GOARCH="amd64" go build -o $source_path/$build_output $source_path/$go_file

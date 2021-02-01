@@ -14,3 +14,7 @@
 # Dependency directories (remove the comment below to include it)
 # vendor/
 .idea
+marionette.tar
+marionette_go.tar
+a.html
+.cache
