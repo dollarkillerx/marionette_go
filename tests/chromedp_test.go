@@ -14,7 +14,7 @@ func TestChromeDP(t *testing.T) {
 	log.SetFlags(log.LstdFlags | log.Llongfile)
 
 	options := []chromedp.ExecAllocatorOption{
-		chromedp.Flag("headless", false), // debug使用
+		//chromedp.Flag("headless", false), // debug使用
 		// 禁用GPU，不显示GUI
 		chromedp.DisableGPU,
 		// 取消沙盒模式

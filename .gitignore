@@ -18,3 +18,4 @@ marionette.tar
 marionette_go.tar
 a.html
 .cache
+cmd/marionette
