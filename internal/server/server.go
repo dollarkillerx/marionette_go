@@ -54,6 +54,8 @@ func (s *Server) ssr(ctx *fiber.Ctx) error {
 	cookis := make([]*fiber.Cookie, 0)
 	if err := chromedp.Run(timeoutCtx,
 		chromedp.Navigate(url),
+		chromedp.WaitVisible("body", chromedp.ByQuery),
+		chromedp.WaitReady("body", chromedp.ByQuery),
 		ShowCookies(&cookis),
 		chromedp.OuterHTML("html", &body),
 	); err != nil {
@@ -99,6 +101,8 @@ func (s *Server) avaricious(ctx *fiber.Ctx) error {
 	cookis := make([]*fiber.Cookie, 0)
 	if err := chromedp.Run(timeoutCtx,
 		chromedp.Navigate(ava.Url),
+		chromedp.WaitVisible("body", chromedp.ByQuery),
+		chromedp.WaitReady("body", chromedp.ByQuery),
 		SetCookie(ava.Cookie),
 		ShowCookies(&cookis),
 		chromedp.OuterHTML("html", &body),
